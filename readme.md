@@ -20,13 +20,13 @@ Para cada técnica, foram feitas 30 execuções com sementes de randomização d
 
 Para visualizar o comportamento dos algoritmos de forma mais detalhada, foram geradas as matrizes de confusão médias normalizadas para cada técnica:
 
-Decision Tree Classifier
+- Decision Tree Classifier
 ![cv_decision_trees.png](cv_decision_trees.png)
-K Nearest Neighbors Classifier
+- K Nearest Neighbors Classifier
 ![cv_knn.png](cv_knn.png)
-Random Forest Classifier
+- Random Forest Classifier
 ![cv_random_forest.png](cv_random_forest.png)
-Stochastic Gradient Descent
+- Stochastic Gradient Descent
 ![cv_sgd.png](cv_sgd.png)
 
 
