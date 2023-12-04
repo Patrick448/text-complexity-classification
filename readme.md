@@ -4,7 +4,7 @@ Este é o repositório de um modelo de classificação textual que tem como obje
 
 Após desenvolvimento, os aquivos necessários para a execução do modelo foram salvos no diretório `web_app/model`.
 
-A metodologia de desenvolvimeto é apresentada no arquivo `relatorio.pdf`, e mais detalhes podem ser encontrados no notebook `text-complexity.ipynb`.
+A metodologia de desenvolvimeto é apresentada no arquivo `Relatório___Processo_Seletivo___Estágio___CAED.pdf`, e mais detalhes podem ser encontrados no notebook `text-complexity.ipynb`.
 
 ## Como executar
 
