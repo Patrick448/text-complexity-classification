@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Classificador</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static',filename='dist/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static',filename='form-validation.css') }}" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<nav class="navbar navbar-dark bg-dark">
+ <h1 class="text-light">Classificador</h1>
+</nav>
+
+
+<div class="p-3">
+    <form action="{{ url_for('send_text_form') }}" method="post">
+    <div class="form-group">
+        <label for="text-input">Texto para classificar</label>
+        <textarea class="form-control" name="text" id="text-input" rows="3">{{text}}</textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+       {% if category is defined %}
+        <div class="alert alert-success">
+          <p> {{category}}</p>
+        </div>
+    {% endif %}
+
+    {% if gen_texts is defined %}
+
+<h3>Outros textos gerados a partir do fornecido</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Texto</th>
+      <th scope="col">Nível</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for gen_text in gen_texts %}
+    <tr>
+        <th scope="row">{{gen_text['idx']}}</th>
+      <td>{{gen_text['text']}}</td>
+      <td>{{gen_text['category']}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+        {% endif %}
+
+</div>
+
+
+
+
+</body>
+</html>

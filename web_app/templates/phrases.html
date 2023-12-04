@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Checkout example for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static',filename='dist/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static',filename='form-validation.css') }}" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+<div class="py-5 text-center ">
+    <h2>Classificador</h2>
+    <p class="lead">Esta aplicação é um classificador de dificuldade textual.</p>
+</div>
+
+<div>
+    <form action="{{ url_for('send_text_form') }}" method="post">
+    <div class="form-group">
+        <label for="text-input">Texto para classificar</label>
+        <textarea class="form-control" name="text" id="text-input" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+
+</body>
+</html>
