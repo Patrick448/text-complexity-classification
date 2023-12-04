@@ -8,13 +8,13 @@ def classify(input_text):
     count_vect = None
     tfidf_transformer = None
 
-    with open('text_classifier', 'rb') as training_model:
+    with open('web_app/model/text_classifier', 'rb') as training_model:
         model = pickle.load(training_model)
 
-    with open('count_vect', 'rb') as count_vect_file:
+    with open('web_app/model/count_vect', 'rb') as count_vect_file:
         count_vect = pickle.load(count_vect_file)
 
-    with open('tfidf_transformer', 'rb') as tfidf_transformer_file:
+    with open('web_app/model/tfidf_transformer', 'rb') as tfidf_transformer_file:
         tfidf_transformer = pickle.load(tfidf_transformer_file)
 
     # create bag of words representation for test set
